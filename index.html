@@ -26,22 +26,22 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--white);
-    min-height:100vh;           /* Изменено: вместо height — min-height, чтобы контент мог расширяться */
-    overflow-x:hidden;          /* Горизонтальной прокрутки не будет, вертикальная — по необходимости */
-    overflow-y:auto;            /* Разрешаем вертикальную прокрутку, если контент не помещается */
+    min-height:100vh; 
+    overflow-x:hidden;
+    overflow-y:auto;
 }
 
 /* ===== TOP ===== */
 .top {
     position:relative;
-    min-height:100vh;           /* Минимум высота экрана, но может увеличиваться */
+    min-height:100vh;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     text-align:center;
     padding:20px;
-    padding-bottom: calc(33.333vh + 20px); /* Добавляем отступ снизу, равный высоте блока с линиями + небольшой зазор */
+    padding-bottom: calc(33.333vh + 20px);
     z-index:1;
 }
 
@@ -142,7 +142,6 @@ body {
     color: var(--accent);
 }
 
-/* ===== BOTTOM (декор) — поведение не меняли ===== */
 .bottom {
     position:fixed;
     bottom:0;
@@ -151,7 +150,7 @@ body {
     height:33.333vh;
     z-index:2;
     overflow:hidden;
-    pointer-events: none;       /* Чтобы линии не мешали кликам по контактам, если они перекрываются */
+    pointer-events: none;
 }
 
 /* SVG */
@@ -166,7 +165,6 @@ body {
     object-position:right top;
 }
 
-/* ===== MOBILE ===== */
 @media(max-width:600px){
 
     .cta {
@@ -194,17 +192,15 @@ body {
         font-size:0.9rem;
     }
 
-    /* На мобильных дополнительно увеличиваем нижний отступ, чтобы точно всё помещалось */
     .top {
         padding-bottom: calc(33.333vh + 30px);
     }
 }
 
-/* Для совсем маленьких экранов, где контент может быть выше */
 @media(max-height: 650px) and (max-width: 600px) {
     .top {
         padding-bottom: calc(33.333vh + 45px);
-        justify-content: flex-start; /* Сдвигаем контент вверх, чтобы легче было прокрутить */
+        justify-content: flex-start;
         padding-top: 40px;
     }
     
@@ -222,7 +218,6 @@ body {
 
 <body>
 
-<!-- TOP -->
 <div class="top">
     <div class="top-inner">
 
@@ -234,7 +229,7 @@ body {
 
         <!-- CTA -->
         <div class="cta">
-            <img src="https://raw.githubusercontent.com/kirukhin/silart/d5845f2ddc13ce04ea577ae1971664de166cfa38/cat.png">
+            <img src="https://github.com/kirukhin/silart/blob/8e4cfaf2856e7661e25a056faace04cec09df779/cat.png">
 
             <div class="cta-text">
                 <div class="cta-title">
@@ -256,7 +251,6 @@ body {
     </div>
 </div>
 
-<!-- BOTTOM -->
 <div class="bottom">
     <img 
         src="https://raw.githubusercontent.com/kirukhin/silart/refs/heads/main/lines.svg" 
